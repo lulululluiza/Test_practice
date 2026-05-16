@@ -23,7 +23,7 @@ it("Products are sorted from a to z", ()=> {
     })
 })
 
-it("Products are sorted from a to z", ()=> {
+it("Products are sorted from z to a", ()=> {
     cy.get(locator.PRODUCTS.SORTER).select('za')
 
     cy.get(locator.PRODUCTS.NAME).then(titles => {

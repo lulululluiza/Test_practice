@@ -33,13 +33,6 @@ it("Logging in with a performance glitch user", ()=> {
     cy.get(locator.LOGIN.BTN_LOGIN).click()    
     cy.get('[data-test="title"]', {timeout: 30000}).should('contain', 'Products')
 })
-
- it("Logging in with a error user", ()=> {
-    cy.get(locator.LOGIN.USER).type('error_user')
-    cy.get(locator.LOGIN.PASSWORD).type('secret_sauce')
-    cy.get(locator.LOGIN.BTN_LOGIN).click()
-    cy.get('[data-test="title"]').should('contain', 'Products')
-})
  
 it("Logging in with a visual user", ()=> {
     cy.get(locator.LOGIN.USER).type('visual_user')
@@ -60,6 +53,13 @@ it("Logging in with a visual user", ()=> {
 it("Logging in a wrong username", ()=> {
     cy.get(locator.LOGIN.USER).type('standard_super_user')
     cy.get(locator.LOGIN.PASSWORD).type('secret_sauce')
+    cy.get(locator.LOGIN.BTN_LOGIN).click()
+    cy.get(locator.LOGIN.ERROR_MSG).should('contain', 'Username and password do not match any user in this service')
+})
+
+it("Logging in a wrong password", ()=> {
+    cy.get(locator.LOGIN.USER).type('standard_user')
+    cy.get(locator.LOGIN.PASSWORD).type('secrets_sauce')
     cy.get(locator.LOGIN.BTN_LOGIN).click()
     cy.get(locator.LOGIN.ERROR_MSG).should('contain', 'Username and password do not match any user in this service')
 })

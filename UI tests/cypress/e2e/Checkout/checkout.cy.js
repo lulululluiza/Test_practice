@@ -27,7 +27,7 @@ it('Check if the cart items match the checkout items', () => {
     })
 })
 
-it.only('Check if the subtotal and total value is correct', () => {
+it('Check if the subtotal and total value is correct', () => {
     cy.fillCheckoutInformation()
     cy.get(locator.PRODUCT.PRICE).then( prices => {
         let subtotal = 0

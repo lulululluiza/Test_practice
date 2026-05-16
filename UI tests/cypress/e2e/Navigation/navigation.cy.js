@@ -13,7 +13,7 @@ it('Navigate to main page', () => {
     cy.get('[data-test="title"]').should('contain', 'Products')
 })
 
-it.only('Navigate to a product page and return to main page', () => {
+it('Navigate to a product page and return to main page', () => {
     cy.get(locator.NAVIGATION.MAIN_MENU).click()
     cy.get(locator.NAVIGATION.ALL_ITEMS).click()
     cy.get('[data-test="title"]').should('contain', 'Products')
@@ -33,14 +33,17 @@ it('Navigate to cart page', () => {
     cy.get(locator.CART.TITLE).should('contain', 'Your Cart')
 })
 
-it('Navigate to checkout page', () => {
+it('Navigate to all checkout page', () => {
     //add the first product to the cart, regardless of what it is
     cy.get(locator.PRODUCTS.PRICE).first().next().click()
 
     cy.get(locator.NAVIGATION.CART).click()
     cy.get(locator.CART.CHECKOUT_BTN).click()
-
     cy.get(locator.CHECKOUT.TITLE).should('contain', 'Checkout: Your Information')
+    cy.fillCheckoutInformation()
+    cy.get(locator.CHECKOUT.TITLE).should('contain', 'Checkout: Overview')
+    cy.get(locator.CHECKOUT.FINISH).click()
+    cy.get(locator.CHECKOUT.TITLE).should('contain', 'Checkout: Complete!')
 })
 
 it('Navigate to About page', () => {

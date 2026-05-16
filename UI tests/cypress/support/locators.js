@@ -14,7 +14,7 @@ const locators = {
         FINISH: '[data-test="finish"]',
         SUBTOTAL: '[data-test="subtotal-label"]',
         TAX_LABEL: '[data-test="tax-label"]',
-        TOTAL_LABEL: '[data-test="total-label"]'
+        TOTAL_LABEL: '[data-test="total-label"]',
     },
     LOGIN: {
         USER: '[data-test=username]',
