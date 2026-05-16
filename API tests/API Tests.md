@@ -75,11 +75,11 @@ bookingId: Created when running "Happy path/Create booking", used when a especif
 **Actual Response:** The expected one<br>
 **Status:** Pass<br>
 
-**Test Case:** Update booking
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PUT
-**Header:** Cookie, token={{authToken}}
-**Path Variables:** Id, {{bookingId}}
+**Test Case:** Update booking<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PUT<br>
+**Header:** Cookie, token={{authToken}}<br>
+**Path Variables:** Id, {{bookingId}}<br>
 **Request Body:** 
 ```
 {
@@ -95,16 +95,16 @@ bookingId: Created when running "Happy path/Create booking", used when a especif
     "additionalneeds" : "Dinner"
 }
 ```
-**Expected Response:** Same value as the body
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** Same value as the body<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Partial update booking
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PATCH
-**Header:** Cookie, token={{authToken}}
-**Path Variables:** Id, {{bookingId}}
-**Request Body:** 
+**Test Case:** Partial update booking<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PATCH<br>
+**Header:** Cookie, token={{authToken}}<br>
+**Path Variables:** Id, {{bookingId}}<br>
+**Request Body:** <br>
 ```
 {
     "firstname": "Luizas",
@@ -126,158 +126,158 @@ Expected Response:
     "additionalneeds": "Dinner"
 }
 ```
-**Actual Response:** The expected one
-**Status:** Pass
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Delete booking
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** DELETE
-**Header:** Cookie, token={{authToken}}
-**Path Variables:** Id, {{bookingId}}
-**Request Body:** None
-**Expected Response:** 201 status
-**Actual Response:** The expected one
-**Status:** Pass
+**Test Case:** Delete booking<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** DELETE<br>
+**Header:** Cookie, token={{authToken}}<br>
+**Path Variables:** Id, {{bookingId}}<br>
+**Request Body:** None<br>
+**Expected Response:** 201 status<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
 
 #### Validations
 ##### GetBooking
-**Test Case:** Get a booking by id as json
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** GET
-**Header:** Accept, application/json
-**Request Body:** None
-**Expected Response:** The booking of the ID in json
-**Actual Response:** The expected one
-**Status:** Pass
+**Test Case:** Get a booking by id as json<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** GET<br>
+**Header:** Accept, application/json<br>
+**Request Body:** None<br>
+**Expected Response:** The booking of the ID in json<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Get a booking with a empty id
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** GET
-**Path Variables:** id, leave empty
-**Request Body:** None
-**Expected Response:** An error message and status 404 Not Found
-**Actual Response:** The expected one
-**Status:** Pass
+**Test Case:** Get a booking with a empty id<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** GET<br>
+**Path Variables:** id, leave empty<br>
+**Request Body:** None<br>
+**Expected Response:** An error message and status 404 Not Found<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Get a booking with wrong id
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** GET
-**Path Variables:** id, 9999999999
-**Request Body:** None
-**Expected Response:** An error message and status 404 Not Found
-**Actual Response:** The expected one
-**Status:** Pass
+**Test Case:** Get a booking with wrong id<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** GET<br>
+**Path Variables:** id, 9999999999<br>
+**Request Body:** None<br>
+**Expected Response:** An error message and status 404 Not Found<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Get a booking by id as xml
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** GET
-**Header:** Accept, application/xml
-**Request Body:** None
-**Expected Response:** The booking of the ID in xml
-**Actual Response:** The expected one
-**Status:** Pass
+**Test Case:** Get a booking by id as xml<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** GET<br>
+**Header:** Accept, application/xml<br>
+**Request Body:** None<br>
+**Expected Response:** The booking of the ID in xml<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
 
 ##### GetBookingIds
-**Test Case:** Get all bookings with a existing firstname
-**Endpoint:** https://restful-booker.herokuapp.com/booking?firstname=value
-**Method:** GET
-**Query Params:** firstname, Sally
-**Request Body:** None
-**Expected Response:** All bookings with firstname = Sally
-**Actual Response:** The expected one
-**Status:** Pass
+**Test Case:** Get all bookings with a existing firstname<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking?firstname=value<br>
+**Method:** GET<br>
+**Query Params:** firstname, Sally<br>
+**Request Body:** None<br>
+**Expected Response:** All bookings with firstname = Sally<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Get all bookings with a not existing firstname
-**Endpoint:** https://restful-booker.herokuapp.com/booking?firstname=value
-**Method:** GET
-**Query Params:** firstname, Person That Totally Exists
-**Request Body:** None
-**Expected Response:** A json with a empty array
-**Actual Response:** The expected one
-**Status:** Pass
+**Test Case:** Get all bookings with a not existing firstname<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking?firstname=value<br>
+**Method:** GET<br>
+**Query Params:** firstname, Person That Totally Exists<br>
+**Request Body:** None<br>
+**Expected Response:** A json with a empty array<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Get all bookings filter by lastname
-**Endpoint:** https://restful-booker.herokuapp.com/booking?lastname=value
-**Method:** GET
-**Query Params:** lastname, Smith
-**Request Body:** None
-**Expected Response:** All bookings with lastname = Smith
-**Actual Response:** The expected one
-**Status:** Pass
+**Test Case:** Get all bookings filter by lastname<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking?lastname=value<br>
+**Method:** GET<br>
+**Query Params:** lastname, Smith<br>
+**Request Body:** None<br>
+**Expected Response:** All bookings with lastname = Smith<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Get all bookings with a non existing lastname
-**Endpoint:** https://restful-booker.herokuapp.com/booking?lastname=value
-**Method:** GET
-**Query Params:** lastname, Lastname That Totally Exists
-**Request Body:** None
-**Expected Response:** A json with a empty array
-**Actual Response:** The expected one
-**Status:** Pass
+**Test Case:** Get all bookings with a non existing lastname<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking?lastname=value<br>
+**Method:** GET<br>
+**Query Params:** lastname, Lastname That Totally Exists<br>
+**Request Body:** None<br>
+**Expected Response:** A json with a empty array<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Get all bookings filter by checkin
-**Endpoint:** https://restful-booker.herokuapp.com/booking?checkin=value
-**Method:** GET
-**Query Params:** checkin, 2020-01-01
-**Request Body:** None
-**Expected Response:** All bookings with checkin = 2020-01-01
-**Actual Response:** Checkins that don't match the parameter
-**Status:** Fail
-**Evidence:** ![Filter by checkin not working](/API%20tests/evidences/filter_booking_checkin.png)
+**Test Case:** Get all bookings filter by checkin<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking?checkin=value<br>
+**Method:** GET<br>
+**Query Params:** checkin, 2020-01-01<br>
+**Request Body:** None<br>
+**Expected Response:** All bookings with checkin = 2020-01-01<br>
+**Actual Response:** Checkins that don't match the parameter<br>
+**Status:** Fail<br>
+**Evidence:** ![Filter by checkin not working](/API%20tests/evidences/filter_booking_checkin.png)<br>
 
-**Test Case:** Get all bookings with a non existing checkin
-**Endpoint:** https://restful-booker.herokuapp.com/booking?checkin=value
-**Method:** GET
-**Query Params:** checkin, 2020-01-02
-**Request Body:** None
-**Expected Response:** An empty json
-**Actual Response:** Checkins that don't match the parameter
-**Status:** Fail
-**Evidence:** ![Filter by non existing checkin not working](/API%20tests/evidences/filter_non_existing_booking_checkin.png)
+**Test Case:** Get all bookings with a non existing checkin<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking?checkin=value<br>
+**Method:** GET<br>
+**Query Params:** checkin, 2020-01-02<br>
+**Request Body:** None<br>
+**Expected Response:** An empty json<br>
+**Actual Response:** Checkins that don't match the parameter<br>
+**Status:** Fail<br>
+**Evidence:** ![Filter by non existing checkin not working](/API%20tests/evidences/filter_non_existing_booking_checkin.png)<br>
 
-**Test Case:** Get all bookings filter by checkout
-**Endpoint:** https://restful-booker.herokuapp.com/booking?checkout=value
-**Method:** GET
-**Query Params:** checkout, 2020-01-01
-**Request Body:** None
-**Expected Response:** All bookings with checkout = 2020-01-01
-**Actual Response:** Checkouts that don't match the parameter
-**Status:** Fail
-**Evidence:** ![Filter by checkout not working](/API%20tests/evidences/filter_booking_chechout.png)
+**Test Case:** Get all bookings filter by checkout<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking?checkout=value<br>
+**Method:** GET<br>
+**Query Params:** checkout, 2020-01-01<br>
+**Request Body:** None<br>
+**Expected Response:** All bookings with checkout = 2020-01-01<br>
+**Actual Response:** Checkouts that don't match the parameter<br>
+**Status:** Fail<br>
+**Evidence:** ![Filter by checkout not working](/API%20tests/evidences/filter_booking_chechout.png)<br>
 
-**Test Case:** Get all bookings with a non existing checkout
-**Endpoint:** https://restful-booker.herokuapp.com/booking?checkout=value
-**Method:** GET
-**Query Params:** checkout, 2020-01-02
-**Request Body:** None
-**Expected Response:** An empty json
-**Actual Response:** Checkouts that don't match the parameter
-**Status:** Fail
-**Evidence:** ![Filter by non existing checkout not working](/API%20tests/evidences/filter_non_existing_booking_chechout.png)
+**Test Case:** Get all bookings with a non existing checkout<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking?checkout=value<br>
+**Method:** GET<br>
+**Query Params:** checkout, 2020-01-02<br>
+**Request Body:** None<br>
+**Expected Response:** An empty json<br>
+**Actual Response:** Checkouts that don't match the parameter<br>
+**Status:** Fail<br>
+**Evidence:** ![Filter by non existing checkout not working](/API%20tests/evidences/filter_non_existing_booking_chechout.png)<br>
 
-**Test Case:** Get all bookings filter by all optional parameters
-**Endpoint:** https://restful-booker.herokuapp.com/booking?firstname=value&lastname=value&checkin=value&checkout=value
-**Method:** GET
-**Query Params:** 
-- firstname, Luiza
-- lastname, Person
-- checkin, 2026-03-06
-- checkout, 2026-05-12
-**Request Body:** None
-**Expected Response:** A single booking
-**Actual Response:** An empty json
-**Status:** Fail
-**Evidence:** ![Filter by all options not working](/API%20tests/evidences/filter_booking_all_options.png)
-**Obs.:** The problem seens to be on fields checkin and checkout, removing them from the request and the body is the expected one.
+**Test Case:** Get all bookings filter by all optional parameters<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking?firstname=value&lastname=value&checkin=value&checkout=value<br>
+**Method:** GET<br>
+**Query Params:** <br>
+- firstname, Luiza<br>
+- lastname, Person<br>
+- checkin, 2026-03-06<br>
+- checkout, 2026-05-12<br>
+**Request Body:** None<br>
+**Expected Response:** A single booking<br>
+**Actual Response:** An empty json<br>
+**Status:** Fail<br>
+**Evidence:** ![Filter by all options not working](/API%20tests/evidences/filter_booking_all_options.png)<br>
+**Obs.:** The problem seens to be on fields checkin and checkout, removing them from the request and the body is the expected one.<br>
 
 
 
 ##### CreateBooking
-**Test Case:** Create a booking without header Content-Type
-**Endpoint:** https://restful-booker.herokuapp.com/booking
-**Method:** POST
-**Header:** None (make sure Content-Type: application/json is disabled, in case it's hidden)
+**Test Case:** Create a booking without header Content-Type<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking<br>
+**Method:** POST<br>
+**Header:** None (make sure Content-Type: application/json is disabled, in case it's hidden)<br>
 **Request Body:** 
 ```
 {
@@ -293,14 +293,14 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 500 Internal Server Error
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 500 Internal Server Error<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Create a booking without header Accept
-**Endpoint:** https://restful-booker.herokuapp.com/booking
-**Method:** POST
-**Header:** None (make sure Accept: */* is disabled, in case it's hidden)
+**Test Case:** Create a booking without header Accept<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking<br>
+**Method:** POST<br>
+**Header:** None (make sure Accept: */* is disabled, in case it's hidden)<br>
 **Request Body:** 
 ```
 {
@@ -316,15 +316,15 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 418 I'm a teapot (RFC 2324)
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 418 I'm a teapot (RFC 2324)<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
 
-**Test Case:** Create a booking where header Content-Type value is wrong
-**Endpoint:** https://restful-booker.herokuapp.com/booking
-**Method:** POST
-**Header:** Content-Type: jaison
+**Test Case:** Create a booking where header Content-Type value is wrong<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking<br>
+**Method:** POST<br>
+**Header:** Content-Type: jaison<br>
 **Request Body:** 
 ```
 {
@@ -340,14 +340,14 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 500 Internal Server Error
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 500 Internal Server Error<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Create a booking where header Accept value is wrong 
-**Endpoint:** https://restful-booker.herokuapp.com/booking
-**Method:** POST
-**Header:** Accept: ultimate/format
+**Test Case:** Create a booking where header Accept value is wrong <br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking<br>
+**Method:** POST<br>
+**Header:** Accept: ultimate/format<br>
 **Request Body:** 
 ```
 {
@@ -363,13 +363,13 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 418 I'm a teapot (RFC 2324)
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 418 I'm a teapot (RFC 2324)<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Create a booking without firstname
-**Endpoint:** https://restful-booker.herokuapp.com/booking
-**Method:** POST
+**Test Case:** Create a booking without firstname<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking<br>
+**Method:** POST<br>
 **Request Body:** 
 ```
 {
@@ -384,13 +384,13 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 500 Internal Server Error
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 500 Internal Server Error<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Create a booking without lastname
-**Endpoint:** https://restful-booker.herokuapp.com/booking
-**Method:** POST
+**Test Case:** Create a booking without lastname<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking<br>
+**Method:** POST<br>
 **Request Body:** 
 ```
 {
@@ -405,13 +405,13 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 500 Internal Server Error
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 500 Internal Server Error<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Create a booking without totalprice
-**Endpoint:** https://restful-booker.herokuapp.com/booking
-**Method:** POST
+**Test Case:** Create a booking without totalprice<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking<br>
+**Method:** POST<br>
 **Request Body:** 
 ```
 {
@@ -426,13 +426,13 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 500 Internal Server Error
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 500 Internal Server Error<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Create a booking without depositpaid
-**Endpoint:** https://restful-booker.herokuapp.com/booking
-**Method:** POST
+**Test Case:** Create a booking without depositpaid<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking<br>
+**Method:** POST<br>
 **Request Body:** 
 ```
 {
@@ -447,13 +447,13 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 500 Internal Server Error
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 500 Internal Server Error<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Create a booking without bookingdates
-**Endpoint:** https://restful-booker.herokuapp.com/booking
-**Method:** POST
+**Test Case:** Create a booking without bookingdates<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking<br>
+**Method:** POST<br>
 **Request Body:** 
 ```
 {
@@ -464,13 +464,13 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 500 Internal Server Error
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 500 Internal Server Error<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Create a booking without checkin
-**Endpoint:** https://restful-booker.herokuapp.com/booking
-**Method:** POST
+**Test Case:** Create a booking without checkin<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking<br>
+**Method:** POST<br>
 **Request Body:** 
 ```
 {
@@ -485,13 +485,13 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 500 Internal Server Error
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 500 Internal Server Error<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Create a booking without checkout
-**Endpoint:** https://restful-booker.herokuapp.com/booking
-**Method:** POST
+**Test Case:** Create a booking without checkout<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking<br>
+**Method:** POST<br>
 **Request Body:** 
 ```
 {
@@ -506,13 +506,13 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 500 Internal Server Error
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 500 Internal Server Error<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Create a booking without additionalneeds
-**Endpoint:** https://restful-booker.herokuapp.com/booking
-**Method:** POST
+**Test Case:** Create a booking without additionalneeds<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking<br>
+**Method:** POST<br>
 **Request Body:** 
 ```
 {
@@ -527,21 +527,21 @@ Expected Response:
     }
 }
 ```
-**Expected Response:** A error message and status 500 Internal Server Error
-**Actual Response:** The booking as created without the attribute additionalneeds
-**Status:** Fail
-**Evidence:** ![Create booking without additional needs](/API%20tests/evidences/create_booking_without_additionalneeds.png)
-**Obs.:** The documentation doesn't mentioned it being optional.
+**Expected Response:** A error message and status 500 Internal Server Error<br>
+**Actual Response:** The booking as created without the attribute additionalneeds<br>
+**Status:** Fail<br>
+**Evidence:** ![Create booking without additional needs](/API%20tests/evidences/create_booking_without_additionalneeds.png)<br>
+**Obs.:** The documentation doesn't mentioned it being optional.<br>
 
 
 ##### UpdateBooking
-**Test Case:** Update a booking without header Content-Type
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PUT
+**Test Case:** Update a booking without header Content-Type<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PUT<br>
 **Header:** 
-- Cookie: token={{authToken}}
-- Make sure Content-Type: application/json is disabled, in case it's hidden
-**Path Variables:** id, {{bookingId}}
+- Cookie: token={{authToken}}<br>
+- Make sure Content-Type: application/json is disabled, in case it's hidden<br>
+**Path Variables:** id, {{bookingId}}<br>
 **Request Body:** 
 ```
 {
@@ -557,17 +557,17 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 400 Bad Request
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 400 Bad Request<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Update a booking where header Content-Type value is wrong
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PUT
+**Test Case:** Update a booking where header Content-Type value is wrong<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PUT<br>
 **Header:** 
 - Content-Type: jaison
 - Cookie: token={{authToken}}
-**Path Variables:** id, {{bookingId}}
+**Path Variables:** id, {{bookingId}}<br>
 **Request Body:** 
 ```
 {
@@ -583,17 +583,17 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 400 Bad Request
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 400 Bad Request<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Update a booking without header Accept
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PUT
+**Test Case:** Update a booking without header Accept<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PUT<br>
 **Header:** 
 - Cookie: token={{authToken}}
 - Make sure Accept: */* is disabled, in case it's hidden
-**Path Variables:** id, {{bookingId}}
+**Path Variables:** id, {{bookingId}}<br>
 **Request Body:** 
 ```
 {
@@ -609,17 +609,17 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 405 Method Not Allowed
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 405 Method Not Allowed<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Update a booking where header Accept value is wrong 
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PUT
+**Test Case:** Update a booking where header Accept value is wrong<br> 
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PUT<br>
 **Header:** 
 - Cookie: token={{authToken}}
 - Accept: ultimate/format
-**Path Variables:** id, {{bookingId}}
+**Path Variables:** id, {{bookingId}}<br>
 **Request Body:** 
 ```
 {
@@ -635,16 +635,16 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 418 I'm a teapot (RFC 2324)
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 418 I'm a teapot (RFC 2324)<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-*Test Case:** Update a booking without firstname
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PUT
+*Test Case:** Update a booking without firstname<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PUT<br>
 **Header:** 
 - Cookie: token={{authToken}}
-**Path Variables:** id, {{bookingId}}
+**Path Variables:** id, {{bookingId}}<br>
 **Request Body:** 
 ```
 {
@@ -659,16 +659,16 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 400 Bad Request
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 400 Bad Request<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Update a booking without lastname
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PUT
+**Test Case:** Update a booking without lastname<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PUT<br>
 **Header:** 
 - Cookie: token={{authToken}}
-**Path Variables:** id, {{bookingId}}
+**Path Variables:** id, {{bookingId}}<br>
 **Request Body:** 
 ```
 {
@@ -683,16 +683,16 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 400 Bad Request
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 400 Bad Request<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Update a booking without totalprice
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PUT
+**Test Case:** Update a booking without totalprice<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PUT<br>
 **Header:** 
 - Cookie: token={{authToken}}
-**Path Variables:** id, {{bookingId}}
+**Path Variables:** id, {{bookingId}}<br>
 **Request Body:** 
 ```
 {
@@ -707,16 +707,16 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 400 Bad Request
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 400 Bad Request<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Update a booking without depositpaid
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PUT
+**Test Case:** Update a booking without depositpaid<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PUT<br>
 **Header:** 
 - Cookie: token={{authToken}}
-**Path Variables:** id, {{bookingId}}
+**Path Variables:** id, {{bookingId}}<br>
 **Request Body:** 
 ```
 {
@@ -731,13 +731,13 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 400 Bad Request
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 400 Bad Request<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Update a booking without bookingdates
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PUT
+**Test Case:** Update a booking without bookingdates<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PUT<br>
 **Header:** 
 - Cookie: token={{authToken}}
 **Request Body:** 
@@ -750,13 +750,13 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 400 Bad Request
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 400 Bad Request<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Update a booking without checkin
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PUT
+**Test Case:** Update a booking without checkin<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PUT<br>
 **Header:** 
 - Cookie: token={{authToken}}
 **Request Body:** 
@@ -773,13 +773,13 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 400 Bad Request
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 400 Bad Request<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Update a booking without checkout
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PUT
+**Test Case:** Update a booking without checkout<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PUT<br>
 **Header:** 
 - Cookie: token={{authToken}}
 **Request Body:** 
@@ -796,13 +796,13 @@ Expected Response:
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** A error message and status 400 Bad Request
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** A error message and status 400 Bad Request<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Update a booking without additionalneeds
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PUT
+**Test Case:** Update a booking without additionalneeds<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PUT<br>
 **Header:** 
 - Cookie: token={{authToken}}
 **Request Body:** 
@@ -819,20 +819,20 @@ Expected Response:
     }
 }
 ```
-**Expected Response:** A error message and status 400 Bad Request
-**Actual Response:** The booking as created without the attribute additionalneeds
-**Status:** Fail
-**Evidence:** ![Update booking without additional needs](/API%20tests/evidences/update_booking_without_additionalneeds.png)
-**Obs.:** The documentation doesn't mentioned it being optional.
+**Expected Response:** A error message and status 400 Bad Request<br>
+**Actual Response:** The booking as created without the attribute additionalneeds<br>
+**Status:** Fail<br>
+**Evidence:** ![Update booking without additional needs](/API%20tests/evidences/update_booking_without_additionalneeds.png)<br>
+**Obs.:** The documentation doesn't mentioned it being optional.<br>
 
 
 ##### PartialUpdateBooking
-*Test Case:** Partial update a booking only with firstname
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PATCH
+*Test Case:** Partial update a booking only with firstname<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PATCH<br>
 **Header:** 
 - Cookie: token={{authToken}}
-**Path Variables:** id, {{bookingId}}
+**Path Variables:** id, {{bookingId}}<br>
 **Request Body:** 
 ```
 {
@@ -853,15 +853,15 @@ Expected Response:
     "additionalneeds": "Water"
 }
 ```
-**Actual Response:** The expected one
-**Status:** Pass
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Partial update a booking only with lastname
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PATCH
+**Test Case:** Partial update a booking only with lastname<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PATCH<br>
 **Header:** 
 - Cookie: token={{authToken}}
-**Path Variables:** id, {{bookingId}}
+**Path Variables:** id, {{bookingId}}<br>
 **Request Body:** 
 ```
 {
@@ -882,15 +882,15 @@ Expected Response:
     "additionalneeds": "Water"
 }
 ```
-**Actual Response:** The expected one
-**Status:** Pass
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Partial update a booking only with totalprice
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PATCH
+**Test Case:** Partial update a booking only with totalprice<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PATCH<br>
 **Header:** 
 - Cookie: token={{authToken}}
-**Path Variables:** id, {{bookingId}}
+**Path Variables:** id, {{bookingId}}<br>
 **Request Body:** 
 ```
 {
@@ -911,15 +911,15 @@ Expected Response:
     "additionalneeds": "Water"
 }
 ```
-**Actual Response:** The expected one
-**Status:** Pass
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Partial update a booking only with depositpaid
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PATCH
+**Test Case:** Partial update a booking only with depositpaid<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PATCH<br>
 **Header:** 
 - Cookie: token={{authToken}}
-**Path Variables:** id, {{bookingId}}
+**Path Variables:** id, {{bookingId}}<br>
 **Request Body:** 
 ```
 {
@@ -940,12 +940,12 @@ Expected Response:
     "additionalneeds": "Water"
 }
 ```
-**Actual Response:** The expected one
-**Status:** Pass
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Partial update a booking only with checkin
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PATCH
+**Test Case:** Partial update a booking only with checkin<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PATCH<br>
 **Header:** 
 - Cookie: token={{authToken}}
 **Request Body:** 
@@ -970,14 +970,14 @@ Expected Response:
     "additionalneeds": "Water"
 }
 ```
-**Actual Response:** checkin has been modified, but checkout is now invalid (0NaN-aN-aN)
-**Status:** Fail
-**Evidence:** ![Partial update of checkin bugs checkout](/API%20tests/evidences/partial_update_booking_checkin.png)
-**Obs.:** The documentation doesn't mentioned that both fields need to be updated together.
+**Actual Response:** checkin has been modified, but checkout is now invalid (0NaN-aN-aN)<br>
+**Status:** Fail<br>
+**Evidence:** ![Partial update of checkin bugs checkout](/API%20tests/evidences/partial_update_booking_checkin.png)<br>
+**Obs.:** The documentation doesn't mentioned that both fields need to be updated together.<br>
 
-**Test Case:** Partial update a booking only with checkin
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PATCH
+**Test Case:** Partial update a booking only with checkin<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PATCH<br>
 **Header:** 
 - Cookie: token={{authToken}}
 **Request Body:** 
@@ -1002,14 +1002,14 @@ Expected Response:
     "additionalneeds": "Water"
 }
 ```
-**Actual Response:** checkout has been modified, but checkin is now invalid (0NaN-aN-aN)
-**Status:** Fail
-**Evidence:** ![Partial update of checkout bugs checkout](/API%20tests/evidences/partial_update_booking_checkout.png)
-**Obs.:** The documentation doesn't mentioned that both fields need to be updated together.
+**Actual Response:** checkout has been modified, but checkin is now invalid (0NaN-aN-aN)<br>
+**Status:** Fail<br>
+**Evidence:** ![Partial update of checkout bugs checkout](/API%20tests/evidences/partial_update_booking_checkout.png)<br>
+**Obs.:** The documentation doesn't mentioned that both fields need to be updated together.<br>
 
-**Test Case:** Partial update a booking only with additionalneeds
-**Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** PATCH
+**Test Case:** Partial update a booking only with additionalneeds<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking/:id<br>
+**Method:** PATCH<br>
 **Header:** 
 - Cookie: token={{authToken}}
 **Request Body:** 
@@ -1032,21 +1032,21 @@ Expected Response:
     "additionalneeds": "Juice"
 }
 ```
-**Actual Response:** The booking as created without the attribute additionalneeds
-**Status:** Fail
-**Evidence:** ![Update booking without additional needs](/API%20tests/evidences/update_booking_without_additionalneeds.png)
-**Obs.:** The documentation doesn't mentioned it being optional.
+**Actual Response:** The booking as created without the attribute additionalneeds<br>
+**Status:** Fail<br>
+**Evidence:** ![Update booking without additional needs](/API%20tests/evidences/update_booking_without_additionalneeds.png)<br>
+**Obs.:** The documentation doesn't mentioned it being optional.<br>
 
 ##### DeleteBooking
-**Test Case:** Delete a booking without id
-**Endpoint:** https://restful-booker.herokuapp.com/booking
-**Method:** Delete
+**Test Case:** Delete a booking without id<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking<br>
+**Method:** Delete<br>
 **Header:** 
 - Cookie: token={{authToken}}
-**Request Body:** None
-**Expected Response:** A error message and status 404 Not Found
-**Actual Response:** The expected one
-**Status:** Pass
+**Request Body:** None<br>
+**Expected Response:** A error message and status 404 Not Found<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
 
 
