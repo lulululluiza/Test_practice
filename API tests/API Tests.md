@@ -1,52 +1,52 @@
 ### API Tests - Test Cases
 #### Collection Variables used:
-- baseUrl: https://restful-booker.herokuapp.com
-- authToken: Created when running "Authentification/Create Token", used later when updating and deleting bookings
+- **baseUrl:** https://restful-booker.herokuapp.com
+- **authToken:** Created when running "Authentification/Create Token", used later when updating and deleting bookings
 bookingId: Created when running "Happy path/Create booking", used when a especific id is needed for a request.
-Obs.: To guarantee the correct creation of the variables above, is recommended to run the scripts in the order below (that's also the script's order in the API folder)
-Obs.2: Given the nature of the API, the token and the booking created get sporadically unavailable. In case a test fails, run "Authentification/Create Token" and "Happy path/Create booking" and then try to run the failed tests again.
+**Obs.:** To guarantee the correct creation of the variables above, is recommended to run the scripts in the order below (that's also the script's order in the API folder)
+**Obs.2:** Given the nature of the API, the token and the booking created get sporadically unavailable. In case a test fails, run "Authentification/Create Token" and "Happy path/Create booking" and then try to run the failed tests again.
 
 #### Authentification
-**Test Case:** Create token
-**Endpoint:** https://restful-booker.herokuapp.com/auth
-**Method:** POST
-**Request Body:**
+**Test Case:** Create token<br>
+**Endpoint:** https://restful-booker.herokuapp.com/auth<br>
+**Method:** POST<br>
+**Request Body:**<br>
 ```
 {
     "username" : "admin",
     "password" : "password123"
 }
 ```
-**Expected Response:**
+**Expected Response:**<br>
 ```
 {
     "token": "TOKEN_VALUE"
 }
 ```
-**Actual Response:** The expected one
-**Status:** Pass
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Health check
-**Endpoint:** https://restful-booker.herokuapp.com/ping
-**Method:** GET
-**Request Body:** None
-**Expected Response:** A 201 status
-**Actual Response:** The expected one
-**Status:** Pass
+**Test Case:** Health check<br>
+**Endpoint:** https://restful-booker.herokuapp.com/ping<br>
+**Method:** GET<br>
+**Request Body:** None<br>
+**Expected Response:** A 201 status<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
 
 #### Happy path
-**Test Case:** Get all bookings
-**Endpoint:** https://restful-booker.herokuapp.com/booking
-**Method:** GET
-**Request Body:** None
-**Expected Response:** Json with all booking IDs
-**Actual Response:** The expected one
-**Status:** Pass
+**Test Case:** Get all bookings<br>
+**Endpoint:** https://restful-booker.herokuapp.com/booking<br>
+**Method:** GET<br>
+**Request Body:** None<br>
+**Expected Response:** Json with all booking IDs<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Create booking
+**Test Case:** Create booking<br>
 **Endpoint:** https://restful-booker.herokuapp.com/booking
-**Method:** POST
+**Method:** POST<br>
 **Request Body:** 
 ```
 {
@@ -62,18 +62,18 @@ Obs.2: Given the nature of the API, the token and the booking created get sporad
     "additionalneeds" : "Water"
 }
 ```
-**Expected Response:** Json with all booking IDs
-**Actual Response:** The expected one
-**Status:** Pass
+**Expected Response:** Json with all booking IDs<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
-**Test Case:** Get a booking by id
+**Test Case:** Get a booking by id<br>
 **Endpoint:** https://restful-booker.herokuapp.com/booking/:id
-**Method:** GET
-**Path Variables:** Id, {{bookingId}}
-**Request Body:** None
-**Expected Response:** Json with the matching booking by ID
-**Actual Response:** The expected one
-**Status:** Pass
+**Method:** GET<br>
+**Path Variables:** Id, {{bookingId}}<br>
+**Request Body:** None<br>
+**Expected Response:** Json with the matching booking by ID<br>
+**Actual Response:** The expected one<br>
+**Status:** Pass<br>
 
 **Test Case:** Update booking
 **Endpoint:** https://restful-booker.herokuapp.com/booking/:id
