@@ -40,6 +40,7 @@
 - Sorting triggers an alert.
 - During checkout, it's not possible to insert a Last Name
 - Also during checkout, "Finish" button don't work. <br>
+
 **Prerequisites:** User has an error account and is in the login page<br>
 **Test Steps:** Insert Username "error_user" and Password "secret_sauce" > click "Login"<br>
 **Expected Results:** A couple funcionalities of the system described above are not working<br>
