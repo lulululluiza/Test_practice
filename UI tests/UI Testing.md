@@ -35,10 +35,6 @@
 
 **Test Case:** Login with a error_user glitch user<br>
 **Obs.:** Not automatized
-**Description:** Ok...
-- sort is broken
-- cant insert last name
-- final checkout is not working<br>
 **Description:** Verify if after inserting credentials of a error user, the user log in and a couple of the site's functionalities don't work:
 - Can only insert a single product in cart and can remove it from the cart page.
 - Sorting triggers an alert.
